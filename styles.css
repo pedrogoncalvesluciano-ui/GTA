@@ -1,1 +1,43 @@
-
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:#000;font-family:system-ui,Segoe UI,sans-serif;color:#fff;user-select:none}
+#game{position:fixed;inset:0;width:100%;height:100%;display:block}
+#hud{position:fixed;inset:0;pointer-events:none}
+#topright{position:absolute;top:14px;right:18px;text-align:right;text-shadow:0 2px 4px #000}
+#clock{font-size:15px;opacity:.85}
+#money{font-size:30px;font-weight:800;color:#8dff9a}
+#stars{font-size:26px;letter-spacing:3px;color:#444;margin-top:2px}
+#stars .on{color:#ffd23f;text-shadow:0 0 8px #ffb300}
+#stars.chase .on{animation:blink .5s infinite alternate}
+@keyframes blink{to{color:#4aa3ff;text-shadow:0 0 8px #4aa3ff}}
+#weapon{font-size:15px;margin-top:4px;background:#0008;padding:4px 10px;border-radius:6px;display:inline-block}
+#bars{position:absolute;left:18px;bottom:18px;width:210px}
+.bar{height:12px;background:#0009;border-radius:6px;overflow:hidden;margin-top:5px;border:1px solid #fff3}
+.bar i{display:block;height:100%;width:100%;background:linear-gradient(#e94b4b,#b01f1f)}
+.bar.armor i{background:linear-gradient(#58b7ff,#2379c7);width:0}
+#minimapWrap{position:absolute;left:18px;top:18px;width:196px;height:196px;border-radius:50%;border:3px solid #fffd;background:#0a2238;overflow:hidden;box-shadow:0 4px 18px #000a}
+#minimap{width:190px;height:190px;display:block;margin:0}
+#mission{position:absolute;left:236px;top:22px;max-width:360px;background:#000a;padding:10px 14px;border-left:4px solid #ffd23f;border-radius:6px;display:none}
+#mission b{display:block;color:#ffd23f;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+#mission span{font-size:15px}
+#mission em{display:block;color:#ff7b7b;font-style:normal;font-weight:700;margin-top:3px}
+#speed{position:absolute;right:20px;bottom:20px;font-size:34px;font-weight:800;text-shadow:0 2px 6px #000}
+#prompt{position:absolute;left:50%;bottom:90px;transform:translateX(-50%);background:#000b;padding:8px 18px;border-radius:20px;font-weight:600;display:none}
+#notify{position:absolute;right:20px;top:150px;width:300px;text-align:right}
+#notify div{background:#000b;padding:7px 12px;margin-top:6px;border-radius:6px;animation:in .25s;font-size:14px}
+#notify div.good{border-right:4px solid #8dff9a}#notify div.bad{border-right:4px solid #ff6b6b}
+@keyframes in{from{opacity:0;transform:translateX(30px)}}
+#banner{position:absolute;left:0;right:0;top:32%;text-align:center;font-size:54px;font-weight:900;color:#ffd23f;text-shadow:0 4px 18px #000;opacity:0;transition:opacity .5s}
+#banner.show{opacity:1}
+#help{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:11px;opacity:.55;white-space:nowrap}
+#bigmap{position:fixed;left:50%;top:50%;height:86vh;transform:translate(-50%,-50%);border:3px solid #fff;border-radius:10px;display:none;z-index:5;background:#0a2238}
+#shop{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#14181ff0;border:2px solid #4fc3ff;border-radius:12px;padding:20px;min-width:340px;display:none;z-index:8}
+#shop h2{margin-bottom:12px;color:#4fc3ff}
+#shop button{display:flex;justify-content:space-between;width:100%;margin:5px 0;padding:10px 14px;background:#232b38;color:#fff;border:1px solid #fff2;border-radius:8px;cursor:pointer;font-size:15px}
+#shop button:hover{background:#31405a}
+#dmgflash{position:fixed;inset:0;background:radial-gradient(transparent 40%,#f00a);opacity:0;transition:opacity .4s;pointer-events:none}
+#fade{position:fixed;inset:0;background:#000;opacity:0;transition:opacity .25s;pointer-events:none;z-index:9}
+#wasted{position:fixed;inset:0;display:none;align-items:center;justify-content:center;font-size:90px;font-weight:900;color:#d33;background:#0007;z-index:7;letter-spacing:8px}
+#overlay{position:fixed;inset:0;background:linear-gradient(#0b1e33,#000);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:20}
+#overlay h1{font-size:64px;letter-spacing:10px}
+#overlay p{opacity:.7;margin:6px 0 24px}
+#overlay button{font-size:20px;padding:14px 34px;border-radius:30px;border:0;background:#ffd23f;font-weight:800;cursor:pointer}
