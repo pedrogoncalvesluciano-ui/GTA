@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duas Ilhas — Sandbox Top-Down</title>
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<canvas id="game"></canvas>
 
+<div id="hud">
+  <div id="topright">
+    <div id="clock">09:00</div>
+    <div id="money">$0</div>
+    <div id="stars"></div>
+    <div id="weapon"></div>
+  </div>
+  <div id="bars">
+    <div class="bar"><i id="hp"></i></div>
+    <div class="bar armor"><i id="armor"></i></div>
+  </div>
+  <div id="minimapWrap"><canvas id="minimap" width="190" height="190"></canvas></div>
+  <div id="mission"><b id="mTitle"></b><span id="mText"></span><em id="mTime"></em></div>
+  <div id="speed"></div>
+  <div id="prompt"></div>
+  <div id="notify"></div>
+  <div id="banner"></div>
+  <div id="help">WASD mover · Shift correr · Espaço pular/esquivar · Mouse mirar/atirar · 1-4 armas · F veículo · E interagir · M mapa · N avançar hora · Esc pausa</div>
+</div>
+
+<canvas id="bigmap" width="640" height="760"></canvas>
+<div id="shop"><h2 id="shopTitle"></h2><div id="shopItems"></div><button id="shopClose">Fechar (Esc)</button></div>
+<div id="dmgflash"></div>
+<div id="fade"></div>
+<div id="wasted"></div>
+<div id="overlay"><h1>DUAS ILHAS</h1><p>Sandbox urbano top-down</p><button id="start">Clique para jogar</button></div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
