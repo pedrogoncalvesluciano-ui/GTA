@@ -168,5 +168,10 @@ class Game {
   }
 }
 
-window.game = new Game();
-      
+try {
+  window.game = new Game();
+} catch (e) {
+  console.error(e);
+  const o = document.getElementById('overlay');
+  o.insertAdjacentHTML('beforeend', '<pre style="color:#f88;max-width:90vw;white-space:pre-wrap;margin-top:16px;font-size:13px">Erro ao iniciar: ' + e.message + '</pre>');
+}
