@@ -46,7 +46,7 @@ export class Vehicle {
     this.g = game; this.id = VID++; this.type = type; this.T = VTYPES[type]; this.x = x; this.z = z; this.heading = h; this.vx = this.vz = this.speed = this.lat = this.steerA = this.wheelRot = 0;
     this.input = { throttle: 0, brake: 0, steer: 0, hb: false, reverse: false }; this.hp = this.T.hp; this.occupant = 'none'; this.dead = false; this.burn = 0; this.wreck = 0;
     this.ai = null; this.cop = null; this.smokeT = 0; this.remove = false; this.keep = false; this.parked = false; this.cruise = 12;
-    this.mesh = buildMesh(type, color); this.mesh.rotation.order = 'YXZ'; this.P = this.mesh.userData.parts; game.scene.add(this.mesh); this.sync();
+    this.mesh = buildMesh(type, color); this.mesh.rotation.order = 'YXZ'; this.P = this.mesh.userData.parts; game.scene.add(this.mesh); this.visual();
   }
   circles() {
     if (this.type === 'moto') return [{ x: this.x, z: this.z, r: 0.55 }];
@@ -156,5 +156,4 @@ export class VehicleSystem {
       return;
     }
   }
-                  }
-      
+}
