@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Duas Ilhas — Sandbox Top-Down</title>
 <link rel="stylesheet" href="styles.css">
+<script>
+function showErr(m){var o=document.getElementById('overlay');if(!o)return;var p=document.createElement('pre');p.style.cssText='color:#f88;max-width:90vw;white-space:pre-wrap;font-size:13px;margin-top:16px';p.textContent=m;o.appendChild(p);}
+addEventListener('error',function(e){var t=e.target;if(t&&t.src){showErr('Falha ao carregar: '+t.src.split('/').pop()+' (confira se o arquivo existe com esse nome exato)');}else{showErr('Erro: '+e.message+' ('+(e.filename||'').split('/').pop()+':'+e.lineno+')');}},true);
+addEventListener('unhandledrejection',function(e){showErr('Erro: '+e.reason);});
+</script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
 </head>
 <body>
